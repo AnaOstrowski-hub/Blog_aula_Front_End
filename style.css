@@ -3,20 +3,27 @@ body {
 }
 
 .menu {
-  background-color: #f0f0f0; /* Fundo cinza claro */
-  padding: 10px 20px;       /* Espaçamento interno */
+  background-color: #f0f0f0; 
+  padding: 10px 20px;      
 }
 
 .menu ul {
-  list-style: none;         /* Remove as bolinhas da lista */
+  list-style: none;         
   margin: 0;
   padding: 0;
-  display: flex;            /* Coloca os itens um ao lado do outro */
-  gap: 20px;                /* Espaço entre os itens */
+  display: flex;            
+  gap: 20px;                
 }
 
 .menu a {
-  text-decoration: none;    /* Remove o sublinhado dos links */
-  color: #c3e8f4;           /* Cor do texto escura */
+  text-decoration: none;   
+  color: #c3e8f4;          
   font-family: sans-serif;
+}
+
+.elemento {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
