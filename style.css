@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(215, 239, 247);
+}
+
 .menu {
   background-color: #f0f0f0; /* Fundo cinza claro */
   padding: 10px 20px;       /* Espaçamento interno */
@@ -13,6 +17,6 @@
 
 .menu a {
   text-decoration: none;    /* Remove o sublinhado dos links */
-  color: #333333;           /* Cor do texto escura */
+  color: #c3e8f4;           /* Cor do texto escura */
   font-family: sans-serif;
 }
