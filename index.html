@@ -26,7 +26,11 @@
       <article class="post">
         <h2>Por que os gatos ronronam?</h2>
         <p class="meta">Postado em 5 de Agosto de 2026 por Além do Miado</p>
-        <p>O ronrono é uma das formas mais fascinantes de comunicação dos felinos. Embora a maioria das pessoas associe o som à felicidade, os gatos também ronronam para se acalmar em situações de estresse ou dor.</p>
+        <p>
+          O ronrono é uma das formas mais fascinantes de comunicação dos felinos. Embora a maioria das pessoas associe o som à felicidade, os gatos também ronronam para se acalmar em situações de estresse ou dor.
+          <!-- Texto extra oculto -->
+          <span class="more-text"> Estudos mostram que a frequência desse som oscila entre 20 e 140 Hz, ajudando na regeneração de tecidos e no alívio de dores musculares.</span>
+        </p>
         <a href="#" class="read-more">Ler mais</a>
       </article>
 
@@ -34,7 +38,11 @@
       <article class="post">
         <h2>Como entender a linguagem corporal do seu gato</h2>
         <p class="meta">Postado em 3 de Agosto de 2026 por Dicas Felinas</p>
-        <p>Olhos semifechados, cauda balançando devagar ou orelhas para trás? Cada movimento do seu gato diz algo sobre o humor dele. Aprender a ler esses sinais fortalece muito a amizade entre vocês.</p>
+        <p>
+          Olhos semifechados, cauda balançando devagar ou orelhas para trás? Cada movimento do seu gato diz algo sobre o humor dele. Aprender a ler esses sinais fortalece muito a amizade entre vocês.
+          <!-- Texto extra oculto -->
+          <span class="more-text"> Uma cauda totalmente erguida com a ponta levemente dobrada indica felicidade, enquanto orelhas coladas na cabeça são um sinal claro de medo ou irritação extrema.</span>
+        </p>
         <a href="#" class="read-more">Ler mais</a>
       </article>
 
@@ -47,7 +55,7 @@
         <p>Um espaço dedicado aos amantes de felinos. Aqui compartilhamos dicas de cuidados, curiosidades e comportamento dos nossos amigos de quatro patas.</p>
       </div>
 
-      <!-- Formulário de Captura de E-mail (Conforme criamos antes) -->
+      <!-- Formulário de Captura de E-mail -->
       <div class="widget newsletter">
         <h3>Receba Novidades</h3>
         <p>Inscreva seu e-mail para não perder nenhuma dica felina.</p>
@@ -66,6 +74,28 @@
   <footer>
     <p>&copy; 2026 Mundo dos Gatos. Todos os direitos reservados.</p>
   </footer>
+
+  <!-- Script JavaScript para controlar o comportamento do botão -->
+  <script>
+    document.querySelectorAll('.read-more').forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault(); // Evita que a página recarregue ao clicar no link '#'
+        
+        // Encontra o bloco de texto irmão do botão
+        const textContainer = this.previousElementSibling;
+        const hiddenText = textContainer.querySelector('.more-text');
+        
+        // Alterna a classe de visualização do texto escondido
+        if (hiddenText.style.display === 'inline') {
+          hiddenText.style.display = 'none';
+          this.textContent = 'Ler mais';
+        } else {
+          hiddenText.style.display = 'inline';
+          this.textContent = 'Ler menos';
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
