@@ -70,14 +70,31 @@ header p {
   margin-bottom: 15px;
 }
 
+/* Mecanismo de Esconder/Mostrar Texto */
+.more-text {
+  display: none; /* Esconde o texto por padrão */
+}
+
+.more-text.show {
+  display: inline; /* Mostra o texto quando ganha a classe .show */
+}
+
+/* Botão Ler Mais Atualizado */
 .read-more {
   display: inline-block;
+  background: none;
+  border: none;
   color: #e67e22;
-  text-decoration: none;
+  font-size: 1rem;
   font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  transition: color 0.2s;
 }
 
 .read-more:hover {
+  color: #d35400;
   text-decoration: underline;
 }
 

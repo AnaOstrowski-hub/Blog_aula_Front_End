@@ -28,10 +28,10 @@
         <p class="meta">Postado em 5 de Agosto de 2026 por Além do Miado</p>
         <p>
           O ronrono é uma das formas mais fascinantes de comunicação dos felinos. Embora a maioria das pessoas associe o som à felicidade, os gatos também ronronam para se acalmar em situações de estresse ou dor.
-          <!-- Texto extra oculto -->
-          <span class="more-text"> Estudos mostram que a frequência desse som oscila entre 20 e 140 Hz, ajudando na regeneração de tecidos e no alívio de dores musculares.</span>
+          <!-- Texto que começará escondido -->
+          <span class="more-text"> Além disso, cientistas descobriram que a frequência do ronrono (entre 20 e 140 Hz) pode ajudar na regeneração de tecidos, melhora da densidade óssea e alívio de dores tanto para o próprio animal quanto para os humanos ao redor. É um verdadeiro superpoder terapêutico!</span>
         </p>
-        <a href="#" class="read-more">Ler mais</a>
+        <button type="button" class="read-more">Ler mais</button>
       </article>
 
       <!-- Post 2 -->
@@ -40,10 +40,10 @@
         <p class="meta">Postado em 3 de Agosto de 2026 por Dicas Felinas</p>
         <p>
           Olhos semifechados, cauda balançando devagar ou orelhas para trás? Cada movimento do seu gato diz algo sobre o humor dele. Aprender a ler esses sinais fortalece muito a amizade entre vocês.
-          <!-- Texto extra oculto -->
-          <span class="more-text"> Uma cauda totalmente erguida com a ponta levemente dobrada indica felicidade, enquanto orelhas coladas na cabeça são um sinal claro de medo ou irritação extrema.</span>
+          <!-- Texto que começará escondido -->
+          <span class="more-text"> Por exemplo, uma cauda erguida com a ponta levemente curvada significa felicidade e confiança. Já as orelhas totalmente achatadas para os lados indicam medo ou agressividade. Respeitar o espaço dele nesses momentos evita arranhões indesejados.</span>
         </p>
-        <a href="#" class="read-more">Ler mais</a>
+        <button type="button" class="read-more">Ler mais</button>
       </article>
 
     </section>
@@ -75,22 +75,23 @@
     <p>&copy; 2026 Mundo dos Gatos. Todos os direitos reservados.</p>
   </footer>
 
-  <!-- Script JavaScript para controlar o comportamento do botão -->
+  <!-- Script JavaScript para fazer o botão funcionar -->
   <script>
-    document.querySelectorAll('.read-more').forEach(button => {
-      button.addEventListener('click', function(e) {
-        e.preventDefault(); // Evita que a página recarregue ao clicar no link '#'
-        
-        // Encontra o bloco de texto irmão do botão
-        const textContainer = this.previousElementSibling;
-        const hiddenText = textContainer.querySelector('.more-text');
-        
-        // Alterna a classe de visualização do texto escondido
-        if (hiddenText.style.display === 'inline') {
-          hiddenText.style.display = 'none';
+    // Seleciona todos os botões "Ler mais" da página
+    const buttons = document.querySelectorAll('.read-more');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Encontra o parágrafo pai do botão atual e busca o texto escondido dentro dele
+        const postContent = this.previousElementSibling;
+        const moreText = postContent.querySelector('.more-text');
+
+        // Alterna a visibilidade do texto
+        if (moreText.classList.contains('show')) {
+          moreText.classList.remove('show');
           this.textContent = 'Ler mais';
         } else {
-          hiddenText.style.display = 'inline';
+          moreText.classList.add('show');
           this.textContent = 'Ler menos';
         }
       });
