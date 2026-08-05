@@ -1,29 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Ostrowski</title>
-     <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo dos Gatos - Blog</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <H1>Meu blog</H1>
-  <ul>
-    <li><a href="index.html">Início</a></li>
-    <li><a href="sobre.html">Sobre</a></li>
-    <li><a href="contato.html">Contato</a></li>
-  </ul>
-  <astride>
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur doloribus, eveniet consectetur rerum quaerat fugit fugiat voluptatem dignissimos hic optio quibusdam saepe sed veniam esse. Accusamus aut recusandae eveniet aperiam.</p>
-<form>
-  <form action="seu-servidor.php" method="POST">
-  <label for="email">E-mail:</label>
-  <input type="email" id="email" name="email" placeholder="seu@email.com" required>
-  <button type="submit">Enviar</button>
-</form>
-  </astride>
 
-</nav>
+  <!-- Cabeçalho do Blog -->
+  <header>
+    <div class="container">
+      <h1>🐱 Mundo dos Gatos</h1>
+      <p>O universo felino em um só lugar</p>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="container grid">
+    
+    <!-- Seção de Postagens -->
+    <section class="posts">
+      
+      <!-- Post 1 -->
+      <article class="post">
+        <h2>Por que os gatos ronronam?</h2>
+        <p class="meta">Postado em 5 de Agosto de 2026 por Além do Miado</p>
+        <p>O ronrono é uma das formas mais fascinantes de comunicação dos felinos. Embora a maioria das pessoas associe o som à felicidade, os gatos também ronronam para se acalmar em situações de estresse ou dor.</p>
+        <a href="#" class="read-more">Ler mais</a>
+      </article>
+
+      <!-- Post 2 -->
+      <article class="post">
+        <h2>Como entender a linguagem corporal do seu gato</h2>
+        <p class="meta">Postado em 3 de Agosto de 2026 por Dicas Felinas</p>
+        <p>Olhos semifechados, cauda balançando devagar ou orelhas para trás? Cada movimento do seu gato diz algo sobre o humor dele. Aprender a ler esses sinais fortalece muito a amizade entre vocês.</p>
+        <a href="#" class="read-more">Ler mais</a>
+      </article>
+
+    </section>
+
+    <!-- Barra Lateral -->
+    <aside class="sidebar">
+      <div class="widget">
+        <h3>Sobre o Blog</h3>
+        <p>Um espaço dedicado aos amantes de felinos. Aqui compartilhamos dicas de cuidados, curiosidades e comportamento dos nossos amigos de quatro patas.</p>
+      </div>
+
+      <!-- Formulário de Captura de E-mail (Conforme criamos antes) -->
+      <div class="widget newsletter">
+        <h3>Receba Novidades</h3>
+        <p>Inscreva seu e-mail para não perder nenhuma dica felina.</p>
+        <form>
+          <div class="input-group">
+            <input type="email" placeholder="seu@email.com" required>
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2026 Mundo dos Gatos. Todos os direitos reservados.</p>
+  </footer>
+
 </body>
 </html>
