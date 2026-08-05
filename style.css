@@ -1,9 +1,9 @@
 body {
-  background-color: rgb(4, 4, 4);
+  background-color: rgb(244, 245, 246);
 }
 
 .nav {
-  background-color: #cdf4f9; 
+  background-color: #e0f5fa; 
   padding: 10px 20px;      
 }
 
@@ -17,7 +17,7 @@ body {
 
 .nav a {
   text-decoration: none;   
-  color: #ebf2f5;          
+  color: #080808;          
   font-family: sans-serif;
 }
 
